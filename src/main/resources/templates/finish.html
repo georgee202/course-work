@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Результат</title>
+</head>
+<body>
+<form method="post">
+    <div class="form-group">
+        <div>
+            <label>
+                Поиск:
+                <input type="text" name="str">
+            </label>
+        </div>
+    </div>
+    <div class="form-group">
+        <div>
+            <button type="submit">
+                Отправить
+            </button>
+        </div>
+    </div>
+</form>
+<p><a href="/">Назад</a></p>
+<table>
+    <thead>
+    <tr>
+        <th>Customer ID</th>
+        <th>DateTime</th>
+        <th>Description</th>
+        <th>Mсс Code</th>
+        <th>Amount</th>
+        <th>Terminal ID</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="row : ${results}">
+        <td th:each="value : ${row}" th:text="${value}">&nbsp;</td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>

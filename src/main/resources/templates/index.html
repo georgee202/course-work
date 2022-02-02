@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Загрузка CSV-файлов</title>
+</head>
+<body>
+<form method="post" enctype="multipart/form-data">
+    <div class="form-group">
+        <label>
+            Файл
+        </label>
+        <div>
+            <input type="file" accept=".csv" name="file">
+        </div>
+    </div>
+    <div class="form-group">
+        <div>
+            <button type="submit">
+                Отправить
+            </button>
+            <div></div>
+        </div>
+    </div>
+</form>
+<p th:text="${uploadGender}"></p>
+<p th:text="${uploadMCC}"></p>
+<p th:text="${uploadTransactions}"></p>
+<p th:text="${uploadTypes}"></p>
+<p th:text="${message}"></p>
+<p><a href="/results">Результаты с регистронезависимым поиском</a></p>
+</body>
+</html>
